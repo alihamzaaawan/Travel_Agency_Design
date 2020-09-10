@@ -1,0 +1,105 @@
+body {
+  background-color: #f5f5f5;
+  font-family: calibri;
+  background-image: url('img/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+label {
+  display: block;
+}
+
+span {
+  color: red;
+  display: block;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+input[type='text'] {
+  border-radius: 3px solid grey;
+}
+
+#main {
+  border: 1px solid black;
+  width: 30%;
+  padding-left: 13%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 28%;
+  margin-top: 20px;
+  background-color: #fdcf00;
+  border-radius: 5px;
+  box-shadow: 5px 10px #333;
+}
+
+input[type='submit'] {
+  background-color: white;
+  color: black;
+  width: 162px;
+  padding: 5px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+select {
+  width: 162px;
+  height: 25px;
+  padding: 5px;
+}
+
+option {
+  padding: 5px;
+}
+
+#bg {
+  /* The image used */
+  background-image: url('img/background.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  #main {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  #main {
+    width: 60%;
+    margin: auto;
+  }
+}

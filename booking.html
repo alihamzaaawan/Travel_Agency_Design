@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="jquery3.4.js"></script>
+
+
+
+</head>
+<body>
+		<div class="navbar">
+		  <a href="index.html">Home</a>
+		  <a href="services.html">Services</a>
+		  <a href="faq.html">FAQ</a>
+		  <a href="booking.html">Booking</a>
+		</div>	
+<div id="main">
+
+<h3> Sign
+
+<form onsubmit="return validate()">
+
+<div>
+	<label> First Name </label>
+	<i class="fa fa-shield"></i>
+<input type="text" id="fname" name="fname" />
+	<span id="fnameErr"> </span>
+</div>
+
+<div>
+	<label> Last Name </label>
+	<input type="text" id="lname" name="lname" />
+	<span id="lnameErr"> </span>
+</div>
+<div>
+	<label> Phone Number </label>
+	<input type="text" id="phn" name="phn" />
+	<span id="phnErr"> </span>
+</div>
+
+<div>
+	<label> Email </label>
+	<input type="text" id="email" name="email" />
+	<span id="emailErr"> </span>
+</div>
+<div>
+	<label> Address </label>
+	<input type="text" id="address" name="address" />
+	<span id="addErr"> </span>
+</div>
+
+<div>
+	<label> Credit Card Number </label>
+	<input type="password" id="password" name="password" />
+	<span id="passErr"> </span>
+</div>
+
+<div>
+	<label> Confirm Credit Card Number </label>
+	<input type="password" id="cpassword" name="cpassword" />
+	<span id="cpassErr"> </span>
+</div>
+
+
+<div>
+	<label> Gender </label>
+	<label><input type="radio" name="gender" /> Male</label>
+	<label><input type="radio" name="gender" /> Female</label>
+	<span id="genderErr"> </span>
+</div>
+
+<div>
+	<label> Country </label>
+	
+	<select id="country" name="country">
+
+		<option value=""> -- select -- </option>
+		<option value="Pak"> New Zealand </option>
+		<option value="Chi"> Other </option>
+		
+	</select>
+
+	<span id="countryErr"> </span>
+</div>
+
+<div>
+	<label> Tours </label>
+	<input id="Cp" type="checkbox" name="language" value="CiST"> City Side Tour <br>
+    <input id="C++p" type="checkbox" name="language" value="CoST"> Country Side Tour <br>
+	<span id="languageErr"> </span>
+</div>
+	
+  
+<div>
+	<input type="submit" value="Book now" />
+</div>
+
+
+</form>
+
+</div>
+
+<script>
+
+	function validate(){
+
+		var isValid = true;
+
+		if($("#fname").val() == ""){
+
+			$("#fnameErr").html("please enter first name");
+			isValid = false;
+		}
+		else{
+			$("#fnameErr").html("");
+		}
+
+
+		if($("#lname").val() == ""){
+
+			$("#lnameErr").html("please enter lastname");
+			isValid = false;
+		}
+		else{
+			$("#lnameErr").html("");
+		}
+		if($("#phn").val() == ""){
+
+		$("#phnErr").html("please enter your phone number");
+		isValid = false;
+		}
+		else{
+		$("#phnErr").html("");
+		}
+
+		if($("#email").val() == ""){
+
+			$("#emailErr").html("please enter email");
+			isValid = false;
+		}
+		else{
+			$("#emailErr").html("");
+		}
+		if($("#address").val() == ""){
+
+		$("#addErr").html("please enter address");
+		isValid = false;
+		}
+		else{
+		$("#addErr").html("");
+		}
+
+		if($("#password").val() == ""){
+
+			$("#passErr").html("please enter credit card number");
+			isValid = false;
+		}
+		else{
+			$("#passErr").html("");
+		}
+
+
+		if($("#cpassword").val() == ""){
+
+			$("#cpassErr").html("please enter credit card number again");
+			isValid = false;
+		}
+
+		else if($("#password").val() != $("#cpassword").val()){
+
+			$("#cpassErr").html("credit card numbers do not match");
+			isValid = false;
+		}
+		else{
+			$("#cpassErr").html("");
+		}
+
+		if($("input[name=gender]").is(":checked") == false)
+		{
+
+			$("#genderErr").html("please select gender");
+			isValid = false;
+		}
+		else{
+			$("#genderErr").html("");
+		}
+
+		if($("#country :selected").val() == ""){
+
+			$("#countryErr").html("please select country");
+			isValid = false;
+		}
+		else{
+			$("#countryErr").html("");
+		}
+		
+		var check =0;
+		if($("input[name=language]").prop("checked")== true){
+
+			
+			check = check + 1;
+		}
+
+		if(check==0){
+			
+			$("#languageErr").html("please check at least one checkbox");
+			isValid = false;
+		}
+		else
+		{
+			$("#languageErr").html("");
+		}
+
+
+		return isValid;
+
+	
+
+	}
+
+</script>
+
+
+
+</body>
+</html>

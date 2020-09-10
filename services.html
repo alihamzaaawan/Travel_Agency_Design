@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('img/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+      }
+
+      /* Links inside the navbar */
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+      .boxes {
+        width: 100%;
+        float: left;
+      }
+      #mainDiv {
+        width: 60%;
+        margin: auto;
+      }
+      img {
+        max-width: 100%;
+        padding-bottom: 30px;
+      }
+      h1, p, h3 {
+        text-align: center;
+      }
+      /* On screens that are 992px or less, set the background color to blue */
+      @media screen and (max-width: 992px) {
+      #mainDiv {
+        width: 80%;
+        margin: auto;
+        }
+      }
+
+      /* On screens that are 600px or less, set the background color to olive */
+      @media screen and (max-width: 600px) {
+      #mainDiv {
+      width: 90%;
+      margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="booking.html">Booking</a>
+    </div>
+    <h1>Country Side Tour</h1>
+    <p> Availability:      Available<br>
+        Dates:             6th/8th/10th/11th/12th July, 2020<br>
+        Guide:             Bill Colenso will lead the tour.<br>
+        Length of tour:    10:00 AM - 6:00 PM <br>
+        Level of fitness : Physically fit (required)<br>
+        Starting point :   Wellington Museum</p>
+    <div id="mainDiv">
+      <div id="divOne" class="boxes">
+        <h3>Zealandia (wildlife sanctuary)</h3>
+        <img
+          id="pic"
+          src="img/zealandia.jpg"
+          alt="Zealandia (wildlife sanctuary)"
+        />
+        </div>
+        <div id="divTwo" class="boxes">
+          <h3>Wellington Botanic Garden</h3>
+          <img id="pic" src="img/botanic.jpg" alt="Wellington Botanic Garden" />
+        </div>
+        <div id="divThree" class="boxes">
+          <h3>Museum of New Zealand Te Papa Tongarewa</h3>
+          <img id="pic" src="img/museum.jpg" alt="Museum of New Zealand Te Papa Tongarewa" />
+        </div>
+      </div>
+      </div>
+
+      <div id="mainDiv">
+        <h1>City Side Tour</h1>
+        <p> Availability:      Available<br>
+            Dates:             7th/9th/10th/11th/12th July, 2020<br>
+            Guide:             Xiulan Ma will lead the tour.<br>
+            Length of tour:    10:00 AM - 6:00 PM <br>
+            Level of fitness : Somewhat physically fit (required)<br>
+            Starting point :   National War Memorial</p>
+        <div id="divOne" class="boxes">
+
+        <h3>National War Memorial</h3>
+        <img id="pic" src="img/warm.jpg" alt="National War Memorial" />
+    </div>
+        <div id="divTwo" class="boxes">
+          <h3>City Gallery Wellington</h3>
+          <img id="pic" src="img/gallery.jpg" alt="City Gallery Wellington" />
+        </div>
+        <div id="divThree" class="boxes">
+          <h3>The Weta Cave</h3>
+          <img id="pic" src="img/weta.jpg" alt="The Weta Cave" />
+        </div>
+      </div>
+  </body>
+</html>

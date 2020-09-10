@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery3.4.js"></script>
+    <style>
+      .divQ {
+        height: 103px;
+        width: 100%;
+        background-color: #333;
+        align-items: center;
+      }
+      h4 {
+        padding: 10px;
+        margin: 0;
+        margin-top: 5px;
+        width: 100%;
+        color: white;
+        background-color: black;
+        text-align: center;
+      }
+
+      body {
+        background-image: url('img/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+      }
+
+      /* Links inside the navbar */
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="booking.html">Booking</a>
+    </div>
+    <h4 id="Hf">What if it’s raining?</h4>
+    <div class="divQ" id="first">
+      <p>
+        The tour will be delayed for a certin amount of time. If the weather
+        conditions are not improved by then you will be given the choice to
+        reschedule your tour or get a refund.
+      </p>
+    </div>
+
+    <h4 id="Hs">What should I wear?</h4>
+    <div class="divQ" id="second">
+      <p>
+        You should go through the weather forecast and dress accordigly.
+      </p>
+    </div>
+
+    <h4 id="Ht">What if I am late?</h4>
+    <div class="divQ" id="third">
+      <p>
+        Our tours start on time. When you book a tour, you will receive an email
+        confirmation from us with the meeting details for that tour. If you are
+        running out late to your tour, please communicate with us immediately at
+        XiulanMa@example.com or call us at 12 345 678 910 and we will do our
+        best to catch you up with the group (though at this point we cannot
+        guarantee you’ll be able to meet up with the group)
+      </p>
+    </div>
+
+    <script>
+      $('#Hf').click(function () {
+        $('#third').hide(1000);
+        $('#second').hide(1000);
+        $('#first').toggle(1000);
+      });
+      $('#Hs').click(function () {
+        $('#first').hide(1000);
+        $('#third').hide(1000);
+        $('#second').toggle(1000);
+      });
+      $('#Ht').click(function () {
+        $('#first').hide(1000);
+        $('#second').hide(1000);
+        $('#third').toggle(1000);
+      });
+    </script>
+  </body>
+</html>
